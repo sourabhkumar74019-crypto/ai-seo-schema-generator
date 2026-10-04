@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI SEO & Schema Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon"><i class="fa-solid fa-code"></i></div>
+                <h2>Schema <span>AI</span></h2>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-item active" id="navGenerator"><i class="fa-solid fa-code-branch"></i> SEO Engine</button>
+                <button class="nav-item" id="navProUpgrade"><i class="fa-solid fa-crown"></i> Pro Upgrade</button>
+            </nav>
+            <div class="ad-slot-sidebar">
+                <span class="ad-label">SPONSORED</span>
+                <p><strong>Rank #1 on Google</strong></p>
+                <small>Get Automated Backlink Tools</small>
+                <button class="btn-ad-sm" id="sidebarCheckDeals">Check Deals</button>
+            </div>
+            <div class="api-card">
+                <div class="api-header"><i class="fa-solid fa-key"></i> <span>Gemini API Key</span></div>
+                <input type="password" id="apiKeyInput" placeholder="Paste Gemini API Key...">
+                <button id="saveKeyBtn" class="btn-secondary-sm"><i class="fa-solid fa-check"></i> Save Key</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <h1>AI SEO Meta Tags & Schema Generator</h1>
+                    <p>Generate JSON-LD Structured Data, Titles & Meta Descriptions</p>
+                </div>
+                <button id="themeToggleBtn"><i class="fa-solid fa-sun"></i></button>
+            </header>
+
+            <div class="ad-banner-top">
+                <i class="fa-solid fa-bolt"></i>
+                <span><strong>SEO Special:</strong> Get 75% Off Premium Domain & Hosting Packs. <a href="#" id="topLearnMore">Learn More</a></span>
+            </div>
+
+            <div class="grid-layout">
+                <section class="card input-card">
+                    <div class="card-header"><i class="fa-solid fa-sliders"></i> <h3>Page Parameters</h3></div>
+                    <div class="form-group">
+                        <label for="pageTitle">Page Title / Topic</label>
+                        <input type="text" id="pageTitle" placeholder="E.g. Best Running Shoes for Men in 2026">
+                    </div>
+                    <div class="form-group">
+                        <label for="targetKeywords">Target Keywords</label>
+                        <input type="text" id="targetKeywords" placeholder="E.g. running shoes, marathon footwear">
+                    </div>
+                    <div class="form-group">
+                        <label for="pageSummary">Page Content Summary</label>
+                        <textarea id="pageSummary" rows="3" placeholder="Briefly describe what this page is about..."></textarea>
+                    </div>
+                    <button id="generateBtn" class="btn-primary-block"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate SEO Package</button>
+                </section>
+
+                <section class="card output-card">
+                    <div class="card-header justify-between">
+                        <div class="header-title"><i class="fa-solid fa-terminal"></i> <h3>JSON-LD & Meta Code</h3></div>
+                        <div class="output-actions" style="display:none;" id="outputActions">
+                            <button id="copyBtn" class="action-btn"><i class="fa-regular fa-copy"></i> Copy Code</button>
+                        </div>
+                    </div>
+                    <div id="outputContainer" class="output-box">
+                        <div class="placeholder-state">
+                            <i class="fa-solid fa-code"></i>
+                            <h4>SEO Engine Ready</h4>
+                            <p>Fill page details to output ready-to-paste Meta tags and JSON-LD schema.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div id="proModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" id="closeProModal">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-crown modal-crown"></i>
+                <h2>Upgrade to Schema AI Pro</h2>
+                <p>Bulk Page Audit & Rich Snippet Validator</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h4>Free Tier</h4>
+                    <div class="price">₹0 <span>/mo</span></div>
+                    <ul><li><i class="fa-solid fa-check"></i> Basic Schema Markup</li></ul>
+                    <button class="btn-plan current">Current Plan</button>
+                </div>
+                <div class="pricing-card popular">
+                    <span class="badge">RECOMMENDED</span>
+                    <h4>Pro SEO Agency</h4>
+                    <div class="price">₹499 <span>/mo</span></div>
+                    <ul><li><i class="fa-solid fa-check"></i> Unlimited Enterprise Schema & Meta</li></ul>
+                    <button class="btn-plan primary" id="buyProBtn">Upgrade Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dealsModal" class="modal-overlay">
+        <div class="modal-card modal-sm">
+            <button class="modal-close" id="closeDealsModal">&times;</button>
+            <div class="modal-header"><i class="fa-solid fa-fire modal-fire"></i> <h2>SEO Partner Deals</h2></div>
+            <div class="deals-list">
+                <a href="https://semrush.com" target="_blank" class="deal-item"><strong>Semrush Free Trial</strong> <span class="btn-deal-claim">Claim</span></a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
